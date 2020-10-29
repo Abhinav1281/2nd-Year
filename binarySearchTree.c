@@ -46,19 +46,51 @@ void display(node displayNode)
     display(displayNode->right);    
 }
 
+void search(int searchData,node current)
+{
+    if(current==NULL)
+    {
+        printf("\nDATA NOT FOUND...\n");
+    }
+    else if(current->data==searchData)
+    {
+        printf("\nDATA FOUND...\n");
+    }
+    else
+    {
+        if(searchData<current->data)
+        {
+            search(searchData,current->left);
+        }
+        else
+        {
+            search(searchData,current->right);
+        }
+        
+    }
+    
+}
+
 int main()
 {
     int i=0,d;
-    printf("ENTER \n1 TO CONTINUE \n 2 TO EXIT:");
+    printf("ENTER \n1 TO CONTINUE \n 2 TO EXIT\n3 TO SEARCH:");
     scanf("%d",&i);
-    while(i==1){
-       
+    while(i!=2){
+       if(i==1){
        printf("ENTER DATA TO BE ENTERED:");
        scanf("%d",&d);
         
         root=insert(root,d);
         display(root);
-         printf("ENTER \n1 TO CONTINUE \n 2 TO EXIT :");
+       }
+       else if(i==3)
+       {
+           printf("ENTER DATA TO BE ENTERED:");
+            scanf("%d",&d);
+            search(d,root);
+       }
+         printf("ENTER \n1 TO CONTINUE \n 2 TO EXIT\n3 TO SEARCH:");
         scanf("%d",&i);
     }
     display(root);
