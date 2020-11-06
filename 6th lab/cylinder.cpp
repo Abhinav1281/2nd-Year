@@ -46,7 +46,7 @@ class Cylinder:public Circle
     }
     double Volume()
     {
-        return r*h;
+        return carea()*h;
     }
 };
 int main()
