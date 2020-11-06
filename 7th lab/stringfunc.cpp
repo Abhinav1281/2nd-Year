@@ -32,6 +32,15 @@ class String
         }
         
     }
+    int size()
+    {
+        int i=0;
+        while(s[i])
+        {
+            i++;
+        }
+        return i;
+    }
 };
 int main()
 {
@@ -39,10 +48,13 @@ int main()
     
     String s2("HII");
 
+    cout<<"Size of HELLO:"<<s1.size();
+    cout<<"\nSIZE OF HII:"<<s2.size();
     s1+=s2;
     
     s1+s2;
     cout<<"\nAFTER ADDING S1 is "<<s1.s;
+    cout<<"\nSIZE AFTER ADDING:"<<s1.size();
     s1=s2;
     
     cout<<"\nAFTER COPY S1 is "<<s1.s;
