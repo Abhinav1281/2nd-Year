@@ -8,10 +8,8 @@ class ABC
     {
         x=10;
     } 
-    virtual void display()
-    {
-        cout<<"ACCESSING BASE CLASS+"<<x;
-    }
+    virtual void display()=0;
+    
 };
 class BBC:public ABC
 {
@@ -41,11 +39,11 @@ class KBC:public ABC
 
 int main()
 {
-    ABC onlyBase;
+    
     ABC* derived;
     BBC b;
     KBC k;
-    onlyBase.display();
+   
     derived=&b;
     derived->display();
     derived=&k;
