@@ -10,7 +10,7 @@ class unary
     }
     friend unary operator-(unary &a);
 };
-unary operator--(unary &a)
+unary operator-(unary &a)
 {
     a.x=-(a.x);
     return a;
@@ -19,6 +19,6 @@ int main()
 {
     unary a(50);
     cout<<"\nBEFORE CHANGE "<<a.x;
-    a=--a;
+    -a;
     cout<<"\nAFTER CHANGE "<<a.x;
 }

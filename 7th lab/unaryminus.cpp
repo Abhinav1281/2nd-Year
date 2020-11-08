@@ -10,6 +10,7 @@ class unary
     }
     void operator-()
     {
+        cout<<"\nOVERLOADING -";
         x=-x;
     }
 };
