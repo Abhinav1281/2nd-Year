@@ -6,8 +6,8 @@ class COMPLEX
     public:
     COMPLEX()
     {
-        pp=5;
-        ip=5;
+        pp=0;
+        ip=0;
     }
     COMPLEX(int a)
     {
