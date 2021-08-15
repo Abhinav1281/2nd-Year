@@ -4,27 +4,15 @@ class TIME
 {
     int h,min,s,sumh=0,summ=0,sums=0;
     public:
-    TIME(int hour,int m,int sec)
+    TIME()
     {
-        h=hour,min=m,s=sec;
+        h=5,min=15,s=23;
     }
     void sum(TIME a,TIME b)
     {
-        sums=a.s+b.s;
-        if(sums>=60)
-        {
-            summ+=1;
-            sums%=60;
-        }
-        summ=a.min+b.min;
-        if(summ>=60)
-        {
-            sumh+=1;
-            summ%=60;
-        }
         sumh=a.h+b.h;
-        
-        
+        summ=a.min+b.min;
+        sums=a.s+b.s;
     }
     void display()
     {
@@ -33,8 +21,8 @@ class TIME
 };
 int main()
 {
-    TIME t(2,5,15);
-    TIME t1(3,4,56);
+    TIME t;
+    TIME t1;
     t.sum(t,t1);
     t.display();
 }

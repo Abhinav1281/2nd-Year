@@ -4,10 +4,21 @@ class COMPLEX
 {
     int pp=0,ip=0;
     public:
-    COMPLEX(int a,int b,int c,int d)
+    COMPLEX()
     {
-       pp+=a+c;
-       ip+=c+d;
+        int a,b;
+        cout<<"ENTER 1st NUMBER NORMAL PART:";
+        cin>>a;
+        cout<<"ENTER 1st NUMBER COMPLEX PART:";
+        cin>>b;
+        pp+=a;
+        ip+=b;
+        cout<<"ENTER 2nd NUMBER NORMAL PART:";
+        cin>>a;
+        cout<<"ENTER 2nd NUMBER COMPLEX PART:";
+        cin>>b;
+        pp+=a;
+        ip+=b;
     }
     //friend void add(COMPLEX,COMPLEX);
     void display()
@@ -21,18 +32,7 @@ class COMPLEX
 }*/
 int main()
 {
-     int a,b,c,d;
-        cout<<"ENTER 1st NUMBER NORMAL PART:";
-        cin>>a;
-        cout<<"ENTER 1st NUMBER COMPLEX PART:";
-        cin>>b;
-        
-        cout<<"ENTER 2nd NUMBER NORMAL PART:";
-        cin>>c;
-        cout<<"ENTER 2nd NUMBER COMPLEX PART:";
-        cin>>d;
-        
-    COMPLEX ab(a,b,c,d);
+    COMPLEX ab;
     ab.display();
     
     
